@@ -192,7 +192,9 @@ public class ResultForm extends javax.swing.JFrame {
     private void jButton_Great_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Great_ActionPerformed
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CongratzForm().setVisible(true);
+                javax.swing.JFrame f = new CongratzForm();
+                f.setVisible(true);
+                f.setLocationRelativeTo(null);
                 for (javax.swing.JFrame frame : SearchForm.matchWindows)
                 {
                     frame.dispose();
@@ -204,7 +206,14 @@ public class ResultForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_Great_ActionPerformed
 
     private void jButton_No_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_No_ActionPerformed
-        this.dispose();
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                javax.swing.JFrame f = new LoginForm();
+                f.setVisible(true);
+                f.setLocationRelativeTo(null);
+            }
+        });
+        this.dispose(); //close the Result form
     }//GEN-LAST:event_jButton_No_ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
