@@ -327,22 +327,20 @@ public class SearchForm extends javax.swing.JFrame {
             }
         }
         else{
-            SorryForm sf = new SorryForm();
-            sf.setVisible(true);
-            sf.setLocationRelativeTo(null);
-            sf.pack();
-            sf.setSize(399, 300);
+            javax.swing.JFrame f = new SorryForm();
+            f.setVisible(true);
+            f.setLocationRelativeTo(null);
+            f.setSize(399, 300);
         }
 
         this.dispose();
     }//GEN-LAST:event_jButton_Search_ActionPerformed
         
     private void jButton_cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_cancelActionPerformed
-        LoginForm lf = new LoginForm();
-        lf.setVisible(true);
-        lf.setLocationRelativeTo(null);
-        lf.pack();
-        lf.setSize(400, 315);
+        javax.swing.JFrame f = new LoginForm();
+        f.setVisible(true);
+        f.setLocationRelativeTo(null);
+        f.setSize(400, 315);
         
         this.dispose();
     }//GEN-LAST:event_jButton_cancelActionPerformed
