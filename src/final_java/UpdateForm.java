@@ -22,39 +22,7 @@ public class UpdateForm extends javax.swing.JFrame {
 
     int xMouse;
     int yMouse;
-    String imagePath = null;
-    
-//    // Check input fields. If one or more fields are empty then cannot update
-//    public boolean CheckInputs(){
-//        if(jTextField_nm.getText() == null || jFormattedTextField_age.getText() == null || jFormattedTextField_ht.getText() == null){
-//            return false;
-//        }
-//        else{
-//            try{
-//                Long.parseLong(jFormattedTextField_ht.getText());
-//                return true;
-//            }catch(Exception ex){
-//                return false;
-//            }
-//        }
-//    }
-//    
-//    // Resize image
-//    public ImageIcon ResizeImg(String imagePath, byte[] pic){
-//        ImageIcon myImg = null;
-//        
-//        if(imagePath != null){
-//            myImg = new ImageIcon(imagePath);
-//        }else {
-//            myImg = new ImageIcon(pic);
-//        }
-//        
-//        Image img = myImg.getImage();
-//        Image img2 = img.getScaledInstance(lbl_img.getWidth(), lbl_img.getHeight(), Image.SCALE_SMOOTH);
-//        ImageIcon image = new ImageIcon(img2);
-//        return image;
-//    }
-    
+    String imagePath = null;    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -453,7 +421,11 @@ public class UpdateForm extends javax.swing.JFrame {
 
                     if (pst.executeUpdate() > 0)
                     {
+                        this.dispose();
                         JOptionPane.showMessageDialog(null, "User Updated");
+                        javax.swing.JFrame f = new LoginForm();
+                        f.setVisible(true);
+                        f.setLocationRelativeTo(null);
                     }
 
                 } catch (Exception ex) {
